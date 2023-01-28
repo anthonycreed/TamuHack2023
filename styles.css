@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
+    font-size: 32px;
+    color:#4a768d;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .left{
@@ -32,6 +36,11 @@ iframe {
     border-radius: 50%;
     margin-top: 10%;
     background-color: #4a768d;
+}
+
+.egg:hover {
+    cursor: pointer;
+    filter: brightness(85%)
 }
 
 .progressbar{
