@@ -28,6 +28,7 @@ iframe {
     width: 80%;
     height: 70%;
     border: 2px solid #fffaf8;
+    border-radius: 16px;
 }
 
 .egg{
@@ -48,10 +49,13 @@ iframe {
     width: 80%;
     background-color: #2d394d;
     border: 2px solid #fffaf8;
+    border-radius: 16px;
 }
+
 
 .progressed{
     height: 100%;
-    width: 30%;
+    width: 70%;
     background-color: #ff7a90;
+    border-radius: 14px;
 }
