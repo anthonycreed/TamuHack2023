@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
+    font-size: 32px;
+    color:#4a768d;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .background{
@@ -47,6 +51,7 @@ iframe {
     width: 80%;
     height: 70%;
     border: 2px solid #fffaf8;
+    border-radius: 16px;
 }
 
 .egg{
@@ -57,15 +62,50 @@ iframe {
     background-color: #4a768d;
 }
 
+.egg:hover {
+    cursor: pointer;
+    filter: brightness(85%)
+}
+
+.progressed{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 70%;
+    background-color: #ff7a90;
+    border-radius: 14px;
+}
+
 .progressbar{
     height: 5vh;
     width: 80%;
     background-color: #2d394d;
     border: 2px solid #fffaf8;
+    border-radius: 16px;
 }
-
-.progressed{
+  
+  .progressed:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -300%;
+    width: 300%;
     height: 100%;
-    width: 30%;
-    background-color: #ff7a90;
-}
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(243, 164, 177) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shimmer 1.2s ease-in-out infinite;
+    background-clip: content-box;
+  }
+  
+  @keyframes shimmer {
+    from {
+      transform: translateX(-25%);
+    }
+    to {
+      transform: translateX(200%);
+    }
+  }
+  
+  /* .progressed:hover:before {
+    animation-play-state: running;
+    visibility: visible;
+  } */
