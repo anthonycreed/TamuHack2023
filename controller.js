@@ -4,5 +4,5 @@ function updateBox(htmlPhrase) {
 }
 
 function main() {
-    updateBox("<p>Hello World</p>");
+    updateBox("<button> Hello </button>");
 }
