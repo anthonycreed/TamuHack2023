@@ -1,8 +1,7 @@
-
-function updateBox(htmlPhrase) {
-    document.getElementById('lessonID').innerHTML = htmlPhrase;
-}
-
-function main() {
-    updateBox("<button> Hello </button>");
-}
+const childWindow = document.getElementById('frame').contentWindow;
+window.addEventListener('message', message => {
+    if (message.source !== childWindow) {
+        return; 
+    }
+    document.getElementById('test').innerHTML = "pizza pie";
+});
