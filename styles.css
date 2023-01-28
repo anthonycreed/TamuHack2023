@@ -23,7 +23,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #4a768d;
+    background-color: #81f1f7;
     height: 65vh;
 }
 
@@ -84,18 +84,28 @@ iframe {
     border-radius: 14px;
 }
   
-  #progressed:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -300%;
-    width: 300%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #81f1f7 50%, rgba(255, 255, 255, 0) 100%);
-    animation: shimmer 1.2s ease-in-out infinite;
-    background-clip: content-box;
-  }
-  
+#progressed:before {
+content: "";
+position: absolute;
+top: 0;
+left: -300%;
+width: 300%;
+height: 100%;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #81f1f7 50%, rgba(255, 255, 255, 0) 100%);
+animation: shimmer 1.2s ease-in-out infinite;
+background-clip: content-box;
+}
+
+.add {
+    padding: 12px 8px;
+    border-radius: 12px;
+    background-color: #81f1f7;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
   @keyframes shimmer {
     from {
       transform: translateX(-25%);
