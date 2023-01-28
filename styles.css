@@ -5,6 +5,29 @@
     height: 100vh;
 }
 
+.background{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+}
+
+.up{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a768d;
+    height: 65vh;
+}
+
+.down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffaf8;
+    height: 35vh;
+}
+
 .left{
     display: flex;
     flex-direction: column;

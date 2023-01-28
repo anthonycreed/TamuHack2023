@@ -1,7 +1,5 @@
-const childWindow = document.getElementById('frame').contentWindow;
+childWindow = document.getElementById("UI_box")
+
 window.addEventListener('message', message => {
-    if (message.source !== childWindow) {
-        return; 
-    }
-    document.getElementById('test').innerHTML = "pizza pie";
+    document.getElementById('test').innerHTML = message.data["poke"];
 });
