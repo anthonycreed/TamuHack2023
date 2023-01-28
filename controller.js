@@ -1,7 +1,20 @@
-const childWindow = document.getElementById('frame').contentWindow;
-window.addEventListener('message', message => {
-    if (message.source !== childWindow) {
-        return; 
+// const childWindow = document.getElementById('frame').contentWindow;
+// window.addEventListener('message', message => {
+//     if (message.source !== childWindow) {
+//         return; 
+//     }
+//     document.getElementById('test').innerHTML = "pizza pie";
+// });
+const progressBar = document.getElementById('progressed');
+console.log(progressBar);
+const button = document.getElementById("increase");
+let currWidth = 0;
+function updateProgress(){
+    currWidth += 10;
+    if(currWidth > 100){
+        currWidth = 0;
     }
-    document.getElementById('test').innerHTML = "pizza pie";
-});
+   progressBar.style.width = currWidth + "%";
+}
+
+button.addEventListener('click', updateProgress);

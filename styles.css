@@ -14,11 +14,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #263041;
+    background-color: #9dffb0;
 }
 
 .right{
-    background-color: #2d394d;
+    background-color: #6ec47f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
 
 iframe { 
     width: 80%;
-    height: 70%;
+    height: 80%;
     border: 2px solid #fffaf8;
     border-radius: 16px;
 }
@@ -36,7 +36,7 @@ iframe {
     width: 20vw;
     border-radius: 50%;
     margin-top: 10%;
-    background-color: #4a768d;
+    background-color: #81f1f7;
 }
 
 .egg:hover {
@@ -53,9 +53,9 @@ iframe {
 }
 
 
-.progressed{
+#progressed{
     height: 100%;
-    width: 70%;
-    background-color: #ff7a90;
+    width: 10%;
+    background-color: #81f1f7;
     border-radius: 14px;
 }
