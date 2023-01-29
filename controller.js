@@ -4,6 +4,10 @@ const julie = document.querySelector('.Julie');
 const julie_sub = document.querySelector('.Julie-sub');
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
+    if (message.data["type"] == "landing") {
+        childWindow.src = "income.html";
+        document.getElementById("gifid").src="/media/passiverPink.gif"
+    }
     if (message.data["type"] == "income") {
         childWindow.src = "calculator.html";
         updateProgress();
@@ -11,17 +15,20 @@ window.addEventListener('message', message => {
         eggBoi.src = getRandomHatch();
         julie.innerText = generateRandomName();
         julie_sub.style.visibility = "visible";
+        document.getElementById("gifid").src="/media/passivePink.gif"
 
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
+        document.getElementById("gifid").src="/media/activePing.gif"
         updateProgress();
     }
     if (message.data["type"] == "long-term") {
+        document.getElementById("gifid").src=getRandomHatch()
         childWindow.src = "income.html";
         updateProgress();
     }
-    console.log(message.data["list"][0]["item"])
+    console.log(message.data["type"])
 });
 
 var firstNames = ["Takashi", "Naoko", "Akiko", "Haruka", "Yui", "Akihito", "Ryo", "Kazuo", "Satoshi", "Miyuki"];
