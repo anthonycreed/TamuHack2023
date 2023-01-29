@@ -18,6 +18,8 @@ function updateProgress(){
    progressBar.style.width = currWidth + "%";
 }
 
+progressBar.innerText = "70%";
+
 button.addEventListener('click', updateProgress);
 
 //gifchanger
