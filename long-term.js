@@ -41,6 +41,7 @@ const down = document.querySelector('.down');
 const up = document.querySelector('.up');
 down.style.height = "20vh";
 up.style.height = "80vh";
+let page = 0;
 next.addEventListener('click', ()=>{
     if (page == 0) {
         page++;
