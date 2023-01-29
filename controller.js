@@ -1,10 +1,12 @@
 let gifName = "media\popcat.gif";
-
+const eggBoi = document.getElementById('gifid');
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
         childWindow.src = "calculator.html";
         updateProgress();
+        console.log("Changing source")
+        eggBoi.src = "media/snakeFinal.gif"
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
