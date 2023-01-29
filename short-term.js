@@ -23,6 +23,10 @@ function buttonClick() {
     table.append(elementRow)
 }
 
+function update() {
+    parent.postMessage(shortList);
+}
+
 class ShortList {
     constructor() {
         self.list = new Array();
