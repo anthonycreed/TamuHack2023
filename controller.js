@@ -1,10 +1,12 @@
 let gifName = "popcat.gif";
 
 childWindow = document.getElementById("UI_box")
-
+const iframe = document.querySelector("iframe");
 window.addEventListener('message', message => {
+  console.log("MADE IT");
+
     if (message.data["type"] == "income") {
-        
+        iframe.src = "calculator.html";
     }
     if (message.data["type"] == "short-term") {
 
