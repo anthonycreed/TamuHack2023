@@ -310,10 +310,10 @@ input {
 }
 
 .weekinc{
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 16px;
-
+    margin-bottom: 32px;
 }
 
 .inc {
@@ -347,4 +347,12 @@ button:focus{
 
 h1 {
     border-bottom: 3px solid #7D5C3B;
+}
+
+#next {
+    background-color: #7D5C3B;
+    border-radius: 32px;
+    border-color: white;
+    color: white;
+    padding: 8px;
 }
