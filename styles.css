@@ -407,3 +407,9 @@ h1 {
     padding: 8px;
     margin-top: 0px;
 }
+
+.ghost {
+  position: absolute;
+  left: -5%;
+  bottom: 0%; 
+}
