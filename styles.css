@@ -418,3 +418,13 @@ h1 {
   left: -2.5%;
   bottom: 0%; 
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #e2d4c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5f442a;
+  border-radius: 10px;
+}
