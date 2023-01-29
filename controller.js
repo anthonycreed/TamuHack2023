@@ -1,5 +1,6 @@
 let gifName = "media\popcat.gif";
 const eggBoi = document.getElementById('gifid');
+const julie = document.querySelector('.Julie');
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
@@ -7,6 +8,7 @@ window.addEventListener('message', message => {
         updateProgress();
         console.log("Changing source")
         eggBoi.src = "media/snakeFinal.gif"
+        julie.innerText = generateRandomName();
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
@@ -18,6 +20,15 @@ window.addEventListener('message', message => {
     }
     console.log(message.data["type"])
 });
+
+var firstNames = ["Takashi", "Naoko", "Akiko", "Haruka", "Yui", "Akihito", "Ryo", "Kazuo", "Satoshi", "Miyuki"];
+var lastNames = ["Tanaka", "Suzuki", "Sato", "Kobayashi", "Nakamura", "Yamamoto", "Ikeda", "Matsumoto", "Kimura", "Watanabe"];
+
+function generateRandomName() {
+  var firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+  var lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+  return firstName + " " + lastName;
+}
 
 const progressBar = document.getElementById('progressed');
 console.log(progressBar);
