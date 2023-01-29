@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: #9dffb0;
+    box-shadow: 10px 10px 10px;
 }
 
 .up{
@@ -51,6 +52,7 @@ iframe {
     height: 80%;
     border: 2px solid #fffaf8;
     border-radius: 16px;
+    box-shadow: 0px 15px 15px 5px #4b975a;
 }
 
 .egg{
@@ -62,11 +64,19 @@ iframe {
     display:flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 5px 10px 5px #6ec47f;;
+    transition: transform 0.1s;
 }
 
 .egg:hover {
     cursor: pointer;
     filter: brightness(85%)
+    
+}
+
+.egg:active {
+  transform: scale(.95);
+  box-shadow: 0px 5px 10px 2px #6ec47f;;
 }
 
 .progressbar{
