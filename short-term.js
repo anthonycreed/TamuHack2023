@@ -9,8 +9,7 @@ page = 0
 
 function buttonClick() {
     shortitem = document.getElementById("sterm").value;
-    shortcost = document.getElementById("samount").value;
-    shortList.addItem(shortitem, shortcost);
+    shortcost = document.getElementById("samount").value;   
     table = document.getElementById("tableID");
 
     shortGoals.item.push(shortitem);

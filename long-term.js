@@ -9,7 +9,7 @@ page = 0;
 function buttonClick() {
     longitem = document.getElementById("sterm").value;
     longcost = document.getElementById("samount").value;
-    longList.addItem(longitem, longcost);
+
     table = document.getElementById("tableID");
 
     longGoals.item.push(longitem);
