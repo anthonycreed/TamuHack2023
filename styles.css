@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: normal;
     background-color: #fffaf8;
     height: 65vh;
 }
@@ -111,7 +111,7 @@ background-clip: content-box;
 .add {
     padding: 12px 8px;
     border-radius: 12px;
-    background-color: #81f1f7;
+    background-color: #9dffb0;
     color: white;
     font-weight: bold;
     font-size: 18px;
