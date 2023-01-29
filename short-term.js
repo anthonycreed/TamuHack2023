@@ -35,3 +35,22 @@ class ShortList {
         self.list.push({item: shortitem, cost: shortcost});
     }
 }
+
+let invis = document.getElementsByClassName('invis');
+const next = document.getElementById('hmmm');
+const bruh = document.getElementById('invis');
+const text = document.querySelector('.less');
+const down = document.querySelector('.down');
+const up = document.querySelector('.up');
+down.style.height = "20vh";
+up.style.height = "80vh";
+next.addEventListener('click', ()=>{
+    Array.from(invis).forEach(element => {
+        element.classList.remove('invis');
+    });
+    bruh.removeAttribute('id');
+    next.style.display = "none";
+    text.style.display = "none";
+    down.style.height = "35vh";
+    up.style.height = "65vh";
+})

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="long-term.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/jellee-typeface" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body onload="main();">
+    <div class="background">
+        <div class="up">
+            <table class="table table-hover table-padding caption-top">
+                <thead class="table-dark sticky-top">
+                    <tr>
+                        <th scope="col">Long Term Goal</th>
+                        <th scope="col">Cost per Month</th>
+                    </tr>
+                </thead>
+                <tbody id="tableID"></tbody>
+            </table>
+        </div>
+        <div class="down">
+            <form>
+                <label for="fname">Long Term Goal:</label><br>
+                <input type="text" id="sterm" name="sterm"><br>
+                <label for="lname">Cost per Month:</label><br>
+                <input type="number" id="samount" name="samount">
+            </form> 
+            <div id="buttons">
+                <button onclick="buttonClick();" class="add">
+                    Add Long Term Goal
+                </button>
+                <button onclick="update();" class="add">
+                    All Done
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

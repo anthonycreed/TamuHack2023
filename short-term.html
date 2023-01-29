@@ -13,7 +13,22 @@
 <body onload="main();">
     <div class="background">
         <div class="up">
-            <table class="table table-hover table-padding caption-top">
+            <div class="less">
+                <h1>Short-Term</h1>
+                <p class="shorttext">
+                    Short - Term Wants and Needs are things that people want or need right now or in the near future.
+                    <br>
+                    For example, if you are hungry right now, food is a short-term need. You need to eat something soon in order to be healthy.
+
+                    A short-term want might be getting a new toy or game you've been wanting. You might really want it, but you don't need it to survive, 
+                    even if your best friends have it right when it comes out!
+
+                    It's important to understand the difference between wants and needs because sometimes people have different amounts of income, 
+                    so they have to make choices about what to spend it on. Needs are more important than wants and should be a person's focus. 
+                    For example, it is important to have a roof over your head and food to eat before buying a new game.
+                </p>
+            </div>
+            <table class="table table-hover table-padding caption-top" id="invis">
                 <thead class="table-dark sticky-top">
                     <tr>
                         <th scope="col">Short Term Want</th>
@@ -24,19 +39,21 @@
             </table>
         </div>
         <div class="down">
-            <form>
+
+            <form id="form" class="invis">
                 <label for="fname">Short Term Want:</label><br>
                 <input type="text" id="sterm" name="sterm"><br>
                 <label for="lname">Cost per Month:</label><br>
                 <input type="number" id="samount" name="samount" class="money">
             </form> 
             <div id="buttons">
-                <button onclick="buttonClick();" class="add">
+                <button onclick="buttonClick();" class="add invis">
                     Add Short Term Want
                 </button>
-                <button onclick="update();" class="add">
+                <button onclick="update();" class="add invis">
                     All Done
                 </button>
+                <button id="hmmm">Next Page</button>
             </div>
         </div>
     </div>
