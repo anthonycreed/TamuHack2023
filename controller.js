@@ -5,26 +5,27 @@ const julie_sub = document.querySelector('.Julie-sub');
 childWindow = document.getElementById("UI_box")
 let shortGoals;
 let longGoals;
+let incomeValue;
 
 window.addEventListener('message', message => {
     if (message.data["type"] == "landing") {
         childWindow.src = "income.html";
-        document.getElementById("gifid").src="/media/passiverPink.gif"
+        document.getElementById("gifid").src="media/passiverPink.gif"
         julie.innerText = generateRandomName();
     }
     if (message.data["type"] == "income") {
-        hildWindow.src = "short-term.html";
+        childWindow.src = "short-term.html";
         updateProgress();
         incomeValue = message.data.data;
         console.log("Changing source")
         childWindow = document.getElementById("UI_box")
         julie_sub.style.visibility = "visible";
-        document.getElementById("gifid").src="/media/passivePink.gif"
+        document.getElementById("gifid").src="media/passivePink.gif"
 
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
-        document.getElementById("gifid").src="/media/activePink.gif"
+        document.getElementById("gifid").src="media/activePink.gif"
         shortGoals = message.data.data;
         console.log(shortGoals.item);
         updateProgress();

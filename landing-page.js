@@ -1,3 +1,3 @@
 function update() {
-    parent.postMessage({type:"landing"});
+    parent.postMessage({type:"landing"}, "*");
 }
