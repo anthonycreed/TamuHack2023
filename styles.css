@@ -28,6 +28,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
     background-color: #c5a16e;
     height: 65vh;
 }
@@ -213,11 +214,6 @@ background-clip: content-box;
     color: #fffaf8;
   }
 
-  table{
-    
-    margin-bottom: auto;
-    border: 0;
-  }
   th {
     background-color: #7D5C3B;
     border: 0;
