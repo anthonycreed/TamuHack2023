@@ -10,15 +10,26 @@ const progressBar = document.getElementById('progressed');
 console.log(progressBar);
 const button = document.getElementById("increase");
 let currWidth = 0;
+progressBar.style.width = currWidth;
+progressBar.style.display = "none";
+progressBar.innerText = currWidth + "%";
 function updateProgress(){
-    currWidth += 10;
+    if(currWidth == 0){
+        currWidth += 10;
+    }
+    progressBar.style.display = "flex";
+    currWidth += 30;
     if(currWidth > 100){
         currWidth = 0;
+        progressBar.style.display = "none";
     }
    progressBar.style.width = currWidth + "%";
+   progressBar.innerText = currWidth + "%";
 }
 
-progressBar.innerText = "70%";
+setInterval(updateProgress, 3000);
+
+
 
 //button.addEventListener('click', updateProgress);
 
@@ -38,7 +49,3 @@ setInterval(() => {
   currentCard = (currentCard + 1) % cards.length;
   cards[currentCard].style.display = "flex";
 }, 3000);
-
-document.getElementById("samount").addEventListener("input", function() {
-    this.value = "$" + this.value;
-});
