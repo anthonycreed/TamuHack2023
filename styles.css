@@ -24,19 +24,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #fffaf8;
+    background-color: #c5a16e;
     height: 65vh;
-}
-
-.button_color {
-    color: 4a768d;
 }
 
 .down{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #81f1f7;
+    background-color: #7D5C3B;
     height: 35vh;
 }
 
@@ -111,12 +107,16 @@ background-clip: content-box;
 .add {
     padding: 12px 8px;
     border-radius: 12px;
-    background-color: #81f1f7;
+    background-color: #c5a16e;
     color: white;
     font-weight: bold;
     font-size: 18px;
 }
 
+
+.whitetext{
+    color: #fffaf8;
+}
 
   @keyframes shimmer {
     from {
