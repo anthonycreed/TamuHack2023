@@ -7,7 +7,7 @@ window.addEventListener('message', message => {
         
     }
     if (message.data["type"] == "short-term") {
-
+        childWindow.src = "long-term.html";
     }
     if (message.data["type"] == "long-term") {
 
