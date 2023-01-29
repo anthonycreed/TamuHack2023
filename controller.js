@@ -3,7 +3,7 @@ let gifName = "popcat.gif";
 childWindow = document.getElementById("UI_box")
 
 window.addEventListener('message', message => {
-    document.getElementById('test').innerHTML = message.data["poke"];
+    childWindow.src="income.html"
 });
 
 const progressBar = document.getElementById('progressed');
