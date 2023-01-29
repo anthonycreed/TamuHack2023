@@ -5,7 +5,7 @@ function main() {
 
 function buttonClick() {
     shortitem = document.getElementById("sterm").value;
-    shortcost = document.getElementById("sammount").value;
+    shortcost = document.getElementById("samount").value;
     shortList.addItem(shortitem, shortcost);
     table = document.getElementById("tableID");
 
