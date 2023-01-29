@@ -231,7 +231,7 @@ background-clip: content-box;
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
     align-items: left;
     padding: 0px 32px;
     color: #fffaf8;
@@ -247,6 +247,7 @@ background-clip: content-box;
     font-weight: bold;
     padding: 8px 10px;
     border-bottom:3px solid #7D5C3B;
+    margin: 0;
   }
   .time{
     margin-left: auto;

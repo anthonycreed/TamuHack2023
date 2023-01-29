@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="long-term.js"></script>
+    <script src="long-term.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/jellee-typeface" type="text/css"/>
@@ -13,10 +13,26 @@
 <body onload="main();">
     <div class="background">
         <div class="up">
-            <table class="table table-hover table-padding caption-top">
+            <div class="less">
+                <h1>Long-Term</h1>
+                <p class="shorttext">
+                    Long - Term Wants and Needs are things that people want or need in the future, not right now. 
+
+                    For example, if you want to purchase a new PlayStation or bike later in the year, that's a long-term want. 
+                    It's something you may want to receive in the future, but you don't need it right now or it is not obtainable 
+                    right now because you don't have enough money. 
+
+                    A long-term need might be saving money for a house. When you grow old, you will need money to buy a house for you 
+                    and your family, so it's important to start saving for it now.
+
+                    To obtain long-term wants and needs, you may have to sacrifice or lessen your short-term wants. Short-term wants will 
+                    slow down the process of achieving long-term wants and needs.
+                </p>
+            </div>
+            <table class="table table-hover table-padding caption-top" id="invis">
                 <thead class="table-dark sticky-top">
                     <tr>
-                        <th scope="col">Long Term Goal</th>
+                        <th scope="col">Long Term Want</th>
                         <th scope="col">Cost per Month</th>
                     </tr>
                 </thead>
@@ -24,19 +40,21 @@
             </table>
         </div>
         <div class="down">
-            <form>
-                <label for="fname">Long Term Goal:</label><br>
+
+            <form id="form" class="invis">
+                <label for="fname">Long Term Want:</label><br>
                 <input type="text" id="sterm" name="sterm"><br>
                 <label for="lname">Cost per Month:</label><br>
-                <input type="number" id="samount" name="samount">
+                <input type="number" id="samount" name="samount" class="money">
             </form> 
             <div id="buttons">
-                <button onclick="buttonClick();" class="add">
-                    Add Long Term Goal
+                <button onclick="buttonClick();" class="add invis">
+                    Add Long Term Want
                 </button>
-                <button onclick="update();" class="add">
+                <button onclick="update();" class="add invis">
                     All Done
                 </button>
+                <button id="hmmm">Next Page</button>
             </div>
         </div>
     </div>

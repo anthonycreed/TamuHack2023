@@ -3,14 +3,16 @@ let gifName = "media\popcat.gif";
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
-        childWindow.src = "short-term.html";
+        childWindow.src = "calculator.html";
         updateProgress();
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
+        updateProgress();
     }
     if (message.data["type"] == "long-term") {
-        childWindow.src = "calculator.html"
+        childWindow.src = "income.html";
+        updateProgress();
     }
     console.log(message.data["type"])
 });

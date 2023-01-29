@@ -5,7 +5,7 @@ function main() {
 
 function buttonClick() {
     longitem = document.getElementById("sterm").value;
-    longcost = document.getElementById("samount").value;
+    longcost = "$" +  document.getElementById("samount").value;
     longList.addItem(longitem, longcost);
     table = document.getElementById("tableID");
 
@@ -24,7 +24,7 @@ function buttonClick() {
 }
 
 function update() {
-    parent.postMessage({"type":"long-term","list":longList.list});
+    parent.postMessage({"type":"long-term","list":longList.list},"*");
 }
 
 class LongList {
@@ -35,3 +35,22 @@ class LongList {
         self.list.push({item: longitem, cost: longcost});
     }
 }
+
+let invis = document.getElementsByClassName('invis');
+const next = document.getElementById('hmmm');
+const bruh = document.getElementById('invis');
+const text = document.querySelector('.less');
+const down = document.querySelector('.down');
+const up = document.querySelector('.up');
+down.style.height = "20vh";
+up.style.height = "80vh";
+next.addEventListener('click', ()=>{
+    Array.from(invis).forEach(element => {
+        element.classList.remove('invis');
+    });
+    bruh.removeAttribute('id');
+    next.style.display = "none";
+    text.style.display = "none";
+    down.style.height = "35vh";
+    up.style.height = "65vh";
+})
