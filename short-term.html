@@ -12,10 +12,31 @@
 <body>
     <div class="background">
         <div class="up">
-            test
+            <table class="table table-hover table-padding caption-top">
+                <thead class="table-dark sticky-top">
+                    <tr>
+                        <th scope="col">Short Term Want</th>
+                        <th scope="col">Cost per Month</th>
+                    </tr>
+                </thead>
+                <tbody id="vendorTable"></tbody>
+            </table>
         </div>
         <div class="down">
-            test
+            <form>
+                <label for="fname">Short Term Want:</label><br>
+                <input type="text" id="sterm" name="sterm"><br>
+                <label for="lname">Cost per Month:</label><br>
+                <input type="number" id="samount" name="samount">
+            </form> 
+            <div>
+                <button class="add">
+                    Add Short Term Want
+                </button>
+                <button class="add">
+                    All Done
+                </button>
+            </div>
         </div>
     </div>
 </body>

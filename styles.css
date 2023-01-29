@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: #9dffb0;
+    box-shadow: 10px 10px 10px;
 }
 
 .up{
@@ -23,15 +24,19 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #4a768d;
+    background-color: #fffaf8;
     height: 65vh;
+}
+
+.button_color {
+    color: 4a768d;
 }
 
 .down{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #fffaf8;
+    justify-content: space-evenly;
+    background-color: #81f1f7;
     height: 35vh;
 }
 
@@ -47,6 +52,7 @@ iframe {
     height: 80%;
     border: 2px solid #fffaf8;
     border-radius: 16px;
+    box-shadow: 0px 15px 15px 5px #4b975a;
 }
 
 .egg{
@@ -55,11 +61,22 @@ iframe {
     border-radius: 50%;
     margin-top: 10%;
     background-color: #81f1f7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px 5px #6ec47f;;
+    transition: transform 0.1s;
 }
 
 .egg:hover {
     cursor: pointer;
     filter: brightness(85%)
+    
+}
+
+.egg:active {
+  transform: scale(.95);
+  box-shadow: 0px 5px 10px 2px #6ec47f;;
 }
 
 .progressbar{
@@ -86,18 +103,28 @@ iframe {
     border-radius: 14px;
 }
   
-  #progressed:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -300%;
-    width: 300%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #81f1f7 50%, rgba(255, 255, 255, 0) 100%);
-    animation: shimmer 1.2s ease-in-out infinite;
-    background-clip: content-box;
-  }
-  
+#progressed:before {
+content: "";
+position: absolute;
+top: 0;
+left: -300%;
+width: 300%;
+height: 100%;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #81f1f7 50%, rgba(255, 255, 255, 0) 100%);
+animation: shimmer 1.2s ease-in-out infinite;
+background-clip: content-box;
+}
+
+.add {
+    padding: 12px 8px;
+    border-radius: 12px;
+    background-color: #81f1f7;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
   @keyframes shimmer {
     from {
       transform: translateX(-25%);
