@@ -1,19 +1,37 @@
 let gifName = "media\popcat.gif";
-
+const eggBoi = document.getElementById('gifid');
+const julie = document.querySelector('.Julie');
+const julie_sub = document.querySelector('.Julie-sub');
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
-        childWindow.src = "short-term.html";
+        childWindow.src = "calculator.html";
         updateProgress();
+        console.log("Changing source")
+        eggBoi.src = getRandomHatch();
+        julie.innerText = generateRandomName();
+        julie_sub.style.visibility = "visible";
+
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
+        updateProgress();
     }
     if (message.data["type"] == "long-term") {
-        childWindow.src = "calculator.html"
+        childWindow.src = "income.html";
+        updateProgress();
     }
     console.log(message.data["list"][0]["item"])
 });
+
+var firstNames = ["Takashi", "Naoko", "Akiko", "Haruka", "Yui", "Akihito", "Ryo", "Kazuo", "Satoshi", "Miyuki"];
+var lastNames = ["Tanaka", "Suzuki", "Sato", "Kobayashi", "Nakamura", "Yamamoto", "Ikeda", "Matsumoto", "Kimura", "Watanabe"];
+
+function generateRandomName() {
+  var firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+  var lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+  return firstName + " " + lastName;
+}
 
 const progressBar = document.getElementById('progressed');
 console.log(progressBar);
@@ -56,4 +74,11 @@ setInterval(() => {
   }
   currentCard = (currentCard + 1) % cards.length;
   cards[currentCard].style.display = "flex";
-}, 3000);
+}, 6000);
+
+let animals = ["media/snakeFinal.gif", "media/roboMonkeyFinal.gif", "media/finalPink.gif", "media/monkeyEggAngyFinal.gif"];
+
+function getRandomHatch(){
+  let hatch = animals[Math.floor(Math.random() * animals.length)];
+  return hatch;
+}
