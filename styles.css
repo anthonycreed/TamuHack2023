@@ -53,6 +53,9 @@ button:hover{
     background-color: #c5a16e;
     height: 65vh;
     overflow: auto;
+    font-family: 'JelleeBold';
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .down{
@@ -63,6 +66,9 @@ button:hover{
     height: 35vh;
     padding: 16px;
     gap: 16px;
+    font-family: 'JelleeBold';
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .right{
