@@ -3,29 +3,43 @@ const eggBoi = document.getElementById('gifid');
 const julie = document.querySelector('.Julie');
 const julie_sub = document.querySelector('.Julie-sub');
 childWindow = document.getElementById("UI_box")
+let shortGoals;
+let longGoals;
+
 window.addEventListener('message', message => {
     if (message.data["type"] == "landing") {
         childWindow.src = "income.html";
         document.getElementById("gifid").src="/media/passiverPink.gif"
+        julie.innerText = generateRandomName();
     }
     if (message.data["type"] == "income") {
-        childWindow.src = "calculator.html";
+        hildWindow.src = "short-term.html";
         updateProgress();
+        incomeValue = message.data.data;
         console.log("Changing source")
-        eggBoi.src = getRandomHatch();
-        julie.innerText = generateRandomName();
+        childWindow = document.getElementById("UI_box")
         julie_sub.style.visibility = "visible";
         document.getElementById("gifid").src="/media/passivePink.gif"
 
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
-        document.getElementById("gifid").src="/media/activePing.gif"
+        document.getElementById("gifid").src="/media/activePink.gif"
+        shortGoals = message.data.data;
+        console.log(shortGoals.item);
         updateProgress();
     }
     if (message.data["type"] == "long-term") {
         document.getElementById("gifid").src=getRandomHatch()
-        childWindow.src = "income.html";
+        childWindow.src = "calculator.html";
+        longGoals = message.data.data;
+        childWindow.addEventListener('load', function() {
+            childWindow.contentWindow.postMessage({"type":"short-term","data":shortGoals},"*");
+            childWindow.contentWindow.postMessage({"type":"long-term","data":longGoals},"*");
+            childWindow.contentWindow.postMessage({"type":"income","data":incomeValue},"*");
+  
+          });
+        console.log(longGoals.item);
         updateProgress();
     }
     console.log(message.data["type"])

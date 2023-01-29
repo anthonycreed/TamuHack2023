@@ -3,11 +3,11 @@ const income = document.querySelector('p');
 const next = document.getElementById('next');
 const weekinc = document.querySelector('.weekinc');
 
-  
+let money = 0;
 
 next.addEventListener('click', ()=>{
     if(next.innerText === "Submit Income"){
-        // alert("Youre poor LMAO");
+        money = inputId.value;
        update();
     }
     
@@ -17,5 +17,6 @@ next.addEventListener('click', ()=>{
 })
 
 function update() {
-    window.top.postMessage({"type":"income"},"*");
+    parent.postMessage({"type":"income", "data":money},"*");
+    console.log("MONEY:" + money);
 }
