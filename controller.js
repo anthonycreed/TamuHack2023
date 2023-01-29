@@ -12,7 +12,7 @@ window.addEventListener('message', message => {
     if (message.data["type"] == "long-term") {
         childWindow.src = "calculator.html"
     }
-    console.log(message.data["type"])
+    console.log(message.data["list"][0]["item"])
 });
 
 const progressBar = document.getElementById('progressed');
