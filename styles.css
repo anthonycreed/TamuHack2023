@@ -129,6 +129,7 @@ background-clip: content-box;
 .add {
     padding: 12px 8px;
     border-radius: 12px;
+    background-color: #9dffb0;
     background-color: #c5a16e;
     color: white;
     font-weight: bold;
