@@ -4,7 +4,7 @@ let shortGoals = {
     cost: []
 }
 
-page = 0
+let page = 0
 
 
 function buttonClick() {

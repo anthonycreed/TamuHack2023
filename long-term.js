@@ -4,7 +4,6 @@ let longGoals = {
     cost: []
 }
 
-page = 0;
 
 function buttonClick() {
     longitem = document.getElementById("sterm").value;
