@@ -7,7 +7,7 @@ window.addEventListener('message', message => {
         childWindow.src = "calculator.html";
         updateProgress();
         console.log("Changing source")
-        eggBoi.src = "media/snakeFinal.gif"
+        eggBoi.src = getRandomHatch();
         julie.innerText = generateRandomName();
     }
     if (message.data["type"] == "short-term") {
@@ -72,3 +72,10 @@ setInterval(() => {
   currentCard = (currentCard + 1) % cards.length;
   cards[currentCard].style.display = "flex";
 }, 3000);
+
+let animals = ["media/snakeFinal.gif", "media/roboMonkeyFinal.gif", "media/finalPink.gif", "media/monkeyEggAngyFinal.gif"];
+
+function getRandomHatch(){
+  let hatch = animals[Math.floor(Math.random() * animals.length)];
+  return hatch;
+}
