@@ -1,3 +1,5 @@
+let gifName = "popcat.gif";
+
 childWindow = document.getElementById("UI_box")
 
 window.addEventListener('message', message => {
@@ -26,5 +28,5 @@ button.addEventListener('click', updateProgress);
 
 //gifchanger
 function changeScr() {
-    document.getElementById("gifid").src="popcat.gif";
+    document.getElementById("gifid").src=gifName;
   }
