@@ -23,7 +23,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #81f1f7;
+    background-color: #fffaf8;
     height: 65vh;
 }
 
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #fffaf8;
+    background-color: #81f1f7;
     height: 35vh;
 }
 
