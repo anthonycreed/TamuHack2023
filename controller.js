@@ -45,8 +45,8 @@ window.addEventListener('message', message => {
     console.log(message.data["type"])
 });
 
-var firstNames = ["Takashi", "Naoko", "Akiko", "Haruka", "Yui", "Akihito", "Ryo", "Kazuo", "Satoshi", "Miyuki"];
-var lastNames = ["Tanaka", "Suzuki", "Sato", "Kobayashi", "Nakamura", "Yamamoto", "Ikeda", "Matsumoto", "Kimura", "Watanabe"];
+var firstNames = ["Scrungly", "Scrimbo", "Binky", "Grimbly", "Yorgi", "Poncho", "Frenleaux", "Domple", "Masayoshi"];
+var lastNames = ["Kodama", "Barry", "Keener", "Dang", "Bragg", "De marseille", "Ikeda", "Matsumoto", "Niblets", "Takanaka", "Koizumi", "Miyamoto"];
 
 function generateRandomName() {
   var firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
