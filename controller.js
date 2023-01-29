@@ -6,13 +6,16 @@ window.addEventListener('message', message => {
   console.log("MADE IT");
 
     if (message.data["type"] == "income") {
-        iframe.src = "calculator.html";
+        iframe.src = "short-term.html";
+        updateProgress();
     }
     if (message.data["type"] == "short-term") {
-
+      iframe.src = "long-term.html";
+      updateProgress();
     }
     if (message.data["type"] == "long-term") {
-
+      iframe.src = "calculator.html";
+      updateProgress();
     }
     console.log(message.data["type"])
 });
@@ -38,7 +41,6 @@ function updateProgress(){
    progressBar.innerText = currWidth + "%";
 }
 
-setInterval(updateProgress, 3000);
 
 
 
