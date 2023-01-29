@@ -276,3 +276,8 @@ background-clip: content-box;
     display: flex;
   }
   
+input {
+    background-color: #c5a16e;
+    border: 1px solid white;
+    color: rgb(0, 0, 0);
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="short-term.js"></script>
+    <script src="short-term.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -28,7 +28,7 @@
                 <label for="fname">Short Term Want:</label><br>
                 <input type="text" id="sterm" name="sterm"><br>
                 <label for="lname">Cost per Month:</label><br>
-                <input type="number" id="samount" name="samount">
+                <input type="text" id="samount" name="samount" class="money">
             </form> 
             <div id="buttons">
                 <button onclick="buttonClick();" class="add">

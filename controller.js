@@ -38,3 +38,7 @@ setInterval(() => {
   currentCard = (currentCard + 1) % cards.length;
   cards[currentCard].style.display = "flex";
 }, 3000);
+
+document.getElementById("samount").addEventListener("input", function() {
+    this.value = "$" + this.value;
+});
