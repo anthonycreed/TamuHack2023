@@ -317,7 +317,7 @@ input {
 }
 
 .inc {
-    height:5vh;
+    height:80%;
     width: 20vw;
     background-color: #7D5C3B;
     color: white;
@@ -328,7 +328,7 @@ input {
     display: flex;
 }
 .monay{
-    height: 5vh;
+    height: 80%;
     width: 5vw;
     background-color: #7D5C3B;
     border: 1px solid white;
