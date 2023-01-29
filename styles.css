@@ -333,6 +333,7 @@ input {
     background-color: #7D5C3B;
     border: 1px solid white;
     border-right: none;
+    text-align: center;
 }
 
 input:focus {
