@@ -1,4 +1,4 @@
-let gifName = "popcat.gif";
+let gifName = "media\popcat.gif";
 
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
