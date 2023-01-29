@@ -247,15 +247,20 @@ background-clip: content-box;
   }
 
   .tip{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin-top: 16px;
     height: 5vh;
-    width: 80%;
+    width: 40vw;
     background-color: #2d394d;
     border: 2px solid #fffaf8;
     border-radius: 16px;
     font-size: 0.75rem;
     color: white;
   }
+
+  #carousel {
+    display: flex;
+  }
+  

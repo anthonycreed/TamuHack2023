@@ -20,9 +20,21 @@ function updateProgress(){
 
 progressBar.innerText = "70%";
 
-button.addEventListener('click', updateProgress);
+//button.addEventListener('click', updateProgress);
 
 //gifchanger
 function changeScr() {
     document.getElementById("gifid").src=gifName;
   }
+
+  const carousel = document.getElementById("carousel");
+const cards = carousel.querySelectorAll(".tip");
+let currentCard = 0;
+
+setInterval(() => {
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].style.display = "none";
+  }
+  currentCard = (currentCard + 1) % cards.length;
+  cards[currentCard].style.display = "flex";
+}, 3000);
