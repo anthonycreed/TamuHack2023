@@ -1,5 +1,4 @@
 
-
 .content{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -40,6 +39,7 @@ button:hover{
     justify-content: space-evenly;
     background-color: #7D5C3B;
     height: 35vh;
+    padding: 16px;
 }
 
 .right{
