@@ -2,12 +2,19 @@ function main() {
     longList = new LongList();
 }
 
+let longGoals = {
+    item: [],
+    cost: []
+}
 
 function buttonClick() {
     longitem = document.getElementById("sterm").value;
-    longcost = "$" +  document.getElementById("samount").value;
+    longcost = document.getElementById("samount").value;
     longList.addItem(longitem, longcost);
     table = document.getElementById("tableID");
+
+    longGoals.item.push(longitem);
+    longGoals.cost.push(longcost);
 
     let elementRow = document.createElement("tr");
 
@@ -15,7 +22,7 @@ function buttonClick() {
     let costElement = document.createElement("td");
 
     itemElement.innerHTML = longitem;
-    costElement.innerHTML = longcost;
+    costElement.innerHTML = "$" + longcost;
 
     elementRow.append(itemElement);
     elementRow.append(costElement);
@@ -24,7 +31,8 @@ function buttonClick() {
 }
 
 function update() {
-    parent.postMessage({"type":"long-term","list":longList.list},"*");
+    //parent.postMessage({"type":"long-term","list":longList.list},"*");
+    parent.postMessage({"type":"long-term", "data":longGoals},"*");
 }
 
 class LongList {

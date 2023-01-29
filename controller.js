@@ -2,6 +2,9 @@ let gifName = "media\popcat.gif";
 const eggBoi = document.getElementById('gifid');
 const julie = document.querySelector('.Julie');
 childWindow = document.getElementById("UI_box")
+let shortGoals;
+let longGoals;
+
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
         childWindow.src = "calculator.html";
@@ -9,13 +12,24 @@ window.addEventListener('message', message => {
         console.log("Changing source")
         eggBoi.src = getRandomHatch();
         julie.innerText = generateRandomName();
+        childWindow = document.getElementById("UI_box")
+        childWindow.addEventListener('load', function() {
+          childWindow.contentWindow.postMessage({"type":"short-term","data":shortGoals},"*");
+          childWindow.contentWindow.postMessage({"type":"long-term","data":longGoals},"*");
+          childWindow.contentWindow.postMessage({"type":"income","data":message.data.data},"*");
+
+        });
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
+        shortGoals = message.data.data;
+        console.log(shortGoals.item);
         updateProgress();
     }
     if (message.data["type"] == "long-term") {
         childWindow.src = "income.html";
+        longGoals = message.data.data;
+        console.log(longGoals.item);
         updateProgress();
     }
     console.log(message.data["type"])

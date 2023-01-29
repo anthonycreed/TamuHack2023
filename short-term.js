@@ -2,12 +2,21 @@ function main() {
     shortList = new ShortList();
 }
 
+let shortGoals = {
+    item: [],
+    cost: []
+}
+
 
 function buttonClick() {
     shortitem = document.getElementById("sterm").value;
-    shortcost = "$" + document.getElementById("samount").value;
+    shortcost = document.getElementById("samount").value;
     shortList.addItem(shortitem, shortcost);
     table = document.getElementById("tableID");
+
+    shortGoals.item.push(shortitem);
+    shortGoals.cost.push(shortcost);
+    console.log("ShortList: " + shortGoals.list);
 
     let elementRow = document.createElement("tr");
 
@@ -15,7 +24,7 @@ function buttonClick() {
     let costElement = document.createElement("td");
 
     itemElement.innerHTML = shortitem;
-    costElement.innerHTML = shortcost;
+    costElement.innerHTML = "$" + shortcost;
 
     elementRow.append(itemElement);
     elementRow.append(costElement);
@@ -24,8 +33,12 @@ function buttonClick() {
 }
 
 function update() {
-    parent.postMessage({"type":"short-term","list":shortList.list},"*");
+    //parent.postMessage({"type":"short-term","list":shortList.list},"*");
+    parent.postMessage({"type":"short-term", "data":shortGoals},"*");
+    console.log("ShortList: " + shortGoals.item);
 }
+
+
 
 class ShortList {
     constructor() {
