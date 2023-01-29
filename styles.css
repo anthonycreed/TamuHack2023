@@ -276,6 +276,14 @@ background-clip: content-box;
   #carousel {
     display: flex;
   }
+
+  .tipmark{
+    align-items: left;
+    margin-top: 22px;
+    height: 6vh;
+    width: 6vh;
+    padding-right: 10px;
+}
   
 input {
     background-color: #c5a16e;
