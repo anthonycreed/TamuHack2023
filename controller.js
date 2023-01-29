@@ -10,6 +10,7 @@ window.addEventListener('message', message => {
         childWindow.src = "long-term.html";
     }
     if (message.data["type"] == "long-term") {
+        childWindow.src = "calculator.html"
     }
     console.log(message.data["type"])
 });
