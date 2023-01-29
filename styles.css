@@ -70,6 +70,12 @@ iframe {
     border-radius: 16px;
 }
 
+#increase { 
+    padding: 16px;
+    border: 2px solid #81f1f7;
+    border-radius: 20%;;
+}
+
   
 #progressed{
     position: relative;
@@ -99,4 +105,54 @@ iframe {
     to {
       transform: translateX(200%);
     }
+  }
+
+  #calculated{
+    display: flex;
+    flex-direction: column;
+    background-color: #4a768d;
+    height: 110%;
+    width: 100%;
+
+  }
+  body{
+    margin: 0;
+    font-family: 'JelleeBold';
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 24px;
+    font-size: 24px;
+    color: #979797;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px solid #2d394d;
+  }
+
+  .shortterm, .longterm{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: left;
+    padding-left: 16px;
+    color: #fffaf8;
+    font-size: 20px;
+  }
+  .shortterm  p:hover {
+    cursor: pointer;
+  }
+  .title{
+    grid-column: 1 / 3;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .time{
+    margin-left: auto;
+    margin-right: 46px;
   }
