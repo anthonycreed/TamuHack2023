@@ -25,6 +25,7 @@ font-family: 'JelleeBold';
 font-style: normal;
 }
 
+
 /* Style the logo */
 .logo {
   width: 50px; 
@@ -89,6 +90,7 @@ iframe {
     border: 2px solid #7D5C3B;
     border-radius: 16px;
     box-shadow: 0px 15px 15px 5px #4b975a;
+    
 }
 
 
@@ -104,6 +106,7 @@ iframe {
     box-shadow: 0px 5px 10px 5px #6ec47f;
     transition: transform 0.1s;
     margin-bottom: 2%;
+    
 }
 
 .egg:hover {
@@ -204,9 +207,9 @@ background-clip: content-box;
     height: 100%;
     width: 100%;
   }
+
   body{
     margin: 0;
-
     font-family: 'JelleeBold';
     font-weight: normal;
     font-style: normal;
@@ -320,6 +323,11 @@ input {
     text-align: center;
 }
 
+.rightbox p {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
 .weekinc{
     display: none;
     flex-direction: row;
@@ -366,4 +374,51 @@ h1 {
     border-color: white;
     color: white;
     padding: 8px;
+    margin-top: 0px;
+}
+
+.up p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 24px;
+}
+
+.less{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    color: white;
+}
+
+
+.invis, #invis {
+    display: none;
+}
+
+.ghost {
+  position: absolute;
+  bottom: 0%;
+  left: -2.5%;
+  animation-play-state: paused;
+}
+
+.ghost {
+  position: absolute;
+  bottom: 0%;
+  left: -2.5%;
+  animation-play-state: paused;
+}
+
+
+
+#hmmm {
+    background-color: #c5a16e;
+    border-radius: 32px;
+    border-color: white;
+    color: white;
+    padding: 8px;
+    margin-top: 0px;
 }
