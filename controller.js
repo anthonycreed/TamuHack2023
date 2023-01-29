@@ -11,12 +11,12 @@ window.addEventListener('message', message => {
     if (message.data["type"] == "landing") {
         childWindow.src = "income.html";
         document.getElementById("gifid").src="media/passiverPink.gif"
+        updateProgress();
     }
     if (message.data["type"] == "income") {
         childWindow.src = "short-term.html";
         updateProgress();
         incomeValue = message.data.data;
-        console.log("Changing source")
         childWindow = document.getElementById("UI_box")
         document.getElementById("gifid").src="media/passivePink.gif"
 
@@ -25,7 +25,6 @@ window.addEventListener('message', message => {
         childWindow.src = "long-term.html";
         document.getElementById("gifid").src="media/activePink.gif"
         shortGoals = message.data.data;
-        console.log(shortGoals.item);
         updateProgress();
     }
     if (message.data["type"] == "long-term") {
@@ -40,10 +39,8 @@ window.addEventListener('message', message => {
             childWindow.contentWindow.postMessage({"type":"income","data":incomeValue},"*");
   
           });
-        console.log(longGoals.item);
         updateProgress();
     }
-    console.log(message.data["type"])
 });
 
 var firstNames = ["Scrungly", "Scrimbo", "Binky", "Grimbly", "Yorgi", "Poncho", "Frenleaux", "Domple", "Masayoshi"];
@@ -56,7 +53,6 @@ function generateRandomName() {
 }
 
 const progressBar = document.getElementById('progressed');
-console.log(progressBar);
 const button = document.getElementById("increase");
 let currWidth = 0;
 progressBar.style.width = currWidth;
@@ -65,9 +61,11 @@ progressBar.innerText = currWidth + "%";
 function updateProgress(){
     if(currWidth == 0){
         currWidth += 10;
+    }else{
+      currWidth += 30;
     }
     progressBar.style.display = "flex";
-    currWidth += 30;
+    
     if(currWidth > 100){
         currWidth = 0;
         progressBar.style.display = "none";
@@ -78,15 +76,12 @@ function updateProgress(){
 
 
 
-
-//button.addEventListener('click', updateProgress);
-
 //gifchanger
 function changeScr() {
     document.getElementById("gifid").src=gifName;
   }
 
-  const carousel = document.getElementById("carousel");
+const carousel = document.getElementById("carousel");
 const cards = carousel.querySelectorAll(".tip");
 let currentCard = 0;
 

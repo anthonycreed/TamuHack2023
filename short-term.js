@@ -1,6 +1,3 @@
-function main() {
-    shortList = new ShortList();
-}
 
 let shortGoals = {
     item: [],
@@ -33,21 +30,9 @@ function buttonClick() {
 }
 
 function update() {
-    //parent.postMessage({"type":"short-term","list":shortList.list},"*");
     parent.postMessage({"type":"short-term", "data":shortGoals},"*");
-    console.log("ShortList: " + shortGoals.item);
 }
 
-
-
-class ShortList {
-    constructor() {
-        self.list = new Array();
-    }
-    addItem(shortitem, shortcost) {
-        self.list.push({item: shortitem, cost: shortcost});
-    }
-}
 
 let invis = document.getElementsByClassName('invis');
 const next = document.getElementById('hmmm');

@@ -18,5 +18,4 @@ next.addEventListener('click', ()=>{
 
 function update() {
     parent.postMessage({"type":"income", "data":money},"*");
-    console.log("MONEY:" + money);
 }

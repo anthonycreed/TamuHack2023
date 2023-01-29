@@ -1,6 +1,3 @@
-function main() {
-    longList = new LongList();
-}
 
 let longGoals = {
     item: [],
@@ -31,17 +28,7 @@ function buttonClick() {
 }
 
 function update() {
-    //parent.postMessage({"type":"long-term","list":longList.list},"*");
     parent.postMessage({"type":"long-term", "data":longGoals},"*");
-}
-
-class LongList {
-    constructor() {
-        self.list = new Array();
-    }
-    addItem(longitem, longcost) {
-        self.list.push({item: longitem, cost: longcost});
-    }
 }
 
 let invis = document.getElementsByClassName('invis');
