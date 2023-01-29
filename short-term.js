@@ -24,7 +24,7 @@ function buttonClick() {
 }
 
 function update() {
-    parent.postMessage(shortList);
+    parent.postMessage({"type":"short-term","list":shortList.list});
 }
 
 class ShortList {

@@ -3,7 +3,16 @@ let gifName = "popcat.gif";
 childWindow = document.getElementById("UI_box")
 
 window.addEventListener('message', message => {
-    childWindow.src="income.html"
+    if (message.data["type"] == "income") {
+        
+    }
+    if (message.data["type"] == "short-term") {
+
+    }
+    if (message.data["type"] == "long-term") {
+
+    }
+    console.log(message.data["type"])
 });
 
 const progressBar = document.getElementById('progressed');
