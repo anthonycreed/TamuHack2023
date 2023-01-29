@@ -1,6 +1,7 @@
 let gifName = "media\popcat.gif";
 const eggBoi = document.getElementById('gifid');
 const julie = document.querySelector('.Julie');
+const julie_sub = document.querySelector('.Julie-sub');
 childWindow = document.getElementById("UI_box")
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
@@ -9,6 +10,8 @@ window.addEventListener('message', message => {
         console.log("Changing source")
         eggBoi.src = getRandomHatch();
         julie.innerText = generateRandomName();
+        julie_sub.style.visibility = "visible";
+
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
@@ -71,7 +74,7 @@ setInterval(() => {
   }
   currentCard = (currentCard + 1) % cards.length;
   cards[currentCard].style.display = "flex";
-}, 3000);
+}, 6000);
 
 let animals = ["media/snakeFinal.gif", "media/roboMonkeyFinal.gif", "media/finalPink.gif", "media/monkeyEggAngyFinal.gif"];
 

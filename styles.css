@@ -139,6 +139,11 @@ iframe {
     margin-bottom: 15vh;
 }
 
+.Julie-sub {
+  font-size: 50%;
+  visibility: hidden;
+}
+
 #progressed{
     display: flex;
     align-items: center;
@@ -268,7 +273,7 @@ background-clip: content-box;
     justify-content: center;
     margin-top: 16px;
     height: 8vh;
-    width: 65vh;
+    width: 75vh;
     background-color: white;
     /* background-image: linear-gradient(to right, #2d394d, #98FB98 400px, #2d394d 800px);
   background-size: 800px 100%;
