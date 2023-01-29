@@ -22,6 +22,7 @@ function buttonClick() {
     costElement.innerHTML = "$" + longcost;
 
     elementRow.append(itemElement);
+    
     elementRow.append(costElement);
 
     table.append(elementRow)
