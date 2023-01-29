@@ -1,16 +1,15 @@
 let gifName = "popcat.gif";
 
 childWindow = document.getElementById("UI_box")
-
 window.addEventListener('message', message => {
     if (message.data["type"] == "income") {
-        
+        childWindow.src = "short-term.html";
+        updateProgress();
     }
     if (message.data["type"] == "short-term") {
         childWindow.src = "long-term.html";
     }
     if (message.data["type"] == "long-term") {
-
     }
     console.log(message.data["type"])
 });
@@ -36,7 +35,6 @@ function updateProgress(){
    progressBar.innerText = currWidth + "%";
 }
 
-setInterval(updateProgress, 3000);
 
 
 
