@@ -13,7 +13,7 @@ window.addEventListener('message', message => {
         julie.innerText = generateRandomName();
     }
     if (message.data["type"] == "income") {
-        hildWindow.src = "short-term.html";
+        childWindow.src = "short-term.html";
         updateProgress();
         incomeValue = message.data.data;
         console.log("Changing source")

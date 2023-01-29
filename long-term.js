@@ -1,5 +1,6 @@
 function main() {
     longList = new LongList();
+    page = 0;
 }
 
 let longGoals = {
@@ -30,6 +31,7 @@ function buttonClick() {
     table.append(elementRow)
 }
 
+
 function update() {
     //parent.postMessage({"type":"long-term","list":longList.list},"*");
     parent.postMessage({"type":"long-term", "data":longGoals},"*");
@@ -53,12 +55,22 @@ const up = document.querySelector('.up');
 down.style.height = "20vh";
 up.style.height = "80vh";
 next.addEventListener('click', ()=>{
-    Array.from(invis).forEach(element => {
-        element.classList.remove('invis');
-    });
-    bruh.removeAttribute('id');
-    next.style.display = "none";
-    text.style.display = "none";
-    down.style.height = "35vh";
-    up.style.height = "65vh";
+    if (page == 0) {
+        page++;
+        document.getElementById("change").innerHTML =                
+        "A long-term need might be saving money for a house. When you grow old, you will need money to buy a house for you" +
+        "and your family, so it's important to start saving for it now."+
+        "To obtain long-term wants and needs, you may have to sacrifice or lessen your short-term wants. Short-term wants will " +
+        "slow down the process of achieving long-term wants and needs."
+    }
+    else {
+        Array.from(invis).forEach(element => {
+            element.classList.remove('invis');
+        });
+        bruh.removeAttribute('id');
+        next.style.display = "none";
+        text.style.display = "none";
+        down.style.height = "35vh";
+        up.style.height = "65vh";
+    }
 })
