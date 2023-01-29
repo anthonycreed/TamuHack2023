@@ -40,6 +40,7 @@ button:hover{
     background-color: #7D5C3B;
     height: 35vh;
     padding: 16px;
+    gap: 16px;
 }
 
 .right{
@@ -56,6 +57,7 @@ iframe {
     border-radius: 16px;
     box-shadow: 0px 15px 15px 5px #4b975a;
 }
+
 
 .egg{
     height: 20vw;
@@ -100,6 +102,7 @@ iframe {
     text-decoration: underline;
     margin-bottom: 15vh;
 }
+
 #progressed{
     display: flex;
     align-items: center;
