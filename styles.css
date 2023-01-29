@@ -398,6 +398,22 @@ h1 {
     display: none;
 }
 
+.ghost {
+  position: absolute;
+  bottom: 0%;
+  left: -2.5%;
+  animation-play-state: paused;
+}
+
+.ghost {
+  position: absolute;
+  bottom: 0%;
+  left: -2.5%;
+  animation-play-state: paused;
+}
+
+
+
 #hmmm {
     background-color: #c5a16e;
     border-radius: 32px;
