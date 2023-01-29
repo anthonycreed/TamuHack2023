@@ -23,3 +23,8 @@ function updateProgress(){
 }
 
 button.addEventListener('click', updateProgress);
+
+//gifchanger
+function changeScr() {
+    document.getElementById("gifid").src="popcat.gif";
+  }

@@ -59,6 +59,9 @@ iframe {
     border-radius: 50%;
     margin-top: 10%;
     background-color: #81f1f7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .egg:hover {
