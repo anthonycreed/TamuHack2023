@@ -295,13 +295,55 @@ input {
 
 .rightbox{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     background-color: #c5a16e;
     height: 100vh;
     overflow: auto;
     font-family: 'JelleeBold';
     font-weight: lighter;
     font-style: normal;
+    color: #fffaf8;
+    padding: 32px;
+    text-align: center;
+}
+
+.weekinc{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+}
+
+.inc {
+    height:5vh;
+    width: 20vw;
+    background-color: #7D5C3B;
+    color: white;
+    border-color: white;
+    border-left: none;
+}
+.dolladolla{
+    display: flex;
+}
+.monay{
+    height: 5vh;
+    width: 5vw;
+    background-color: #7D5C3B;
+    border: 1px solid white;
+    border-right: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+    border: 0;
+}
+
+h1 {
+    border-bottom: 3px solid #7D5C3B;
 }
