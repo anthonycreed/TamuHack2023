@@ -137,16 +137,16 @@ background-clip: content-box;
   #calculated{
     display: flex;
     flex-direction: column;
-    background-color: #4a768d;
-    height: 110%;
+    height: 100%;
     width: 100%;
-
   }
   body{
     margin: 0;
+
     font-family: 'JelleeBold';
     font-weight: normal;
     font-style: normal;
+    background-color: #4a768d;
   }
 
   .top{
