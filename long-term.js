@@ -4,6 +4,8 @@ let longGoals = {
     cost: []
 }
 
+page = 0;
+
 function buttonClick() {
     longitem = document.getElementById("sterm").value;
     longcost = document.getElementById("samount").value;
@@ -22,7 +24,7 @@ function buttonClick() {
     costElement.innerHTML = "$" + longcost;
 
     elementRow.append(itemElement);
-    
+
     elementRow.append(costElement);
 
     table.append(elementRow)
