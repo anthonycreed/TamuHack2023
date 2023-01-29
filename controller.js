@@ -11,7 +11,6 @@ window.addEventListener('message', message => {
     if (message.data["type"] == "landing") {
         childWindow.src = "income.html";
         document.getElementById("gifid").src="media/passiverPink.gif"
-        julie.innerText = generateRandomName();
     }
     if (message.data["type"] == "income") {
         childWindow.src = "short-term.html";
@@ -19,7 +18,6 @@ window.addEventListener('message', message => {
         incomeValue = message.data.data;
         console.log("Changing source")
         childWindow = document.getElementById("UI_box")
-        julie_sub.style.visibility = "visible";
         document.getElementById("gifid").src="media/passivePink.gif"
 
     }
@@ -34,6 +32,8 @@ window.addEventListener('message', message => {
         document.getElementById("gifid").src=getRandomHatch()
         childWindow.src = "calculator.html";
         longGoals = message.data.data;
+        julie.innerText = generateRandomName();
+        julie_sub.style.visibility = "visible";
         childWindow.addEventListener('load', function() {
             childWindow.contentWindow.postMessage({"type":"short-term","data":shortGoals},"*");
             childWindow.contentWindow.postMessage({"type":"long-term","data":longGoals},"*");
